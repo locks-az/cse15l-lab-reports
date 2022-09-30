@@ -79,4 +79,17 @@ After entering the correct password you should see the following screen:
 
 Note: For first time users, you will be prompted to trust ieng6. Enter ‘yes’ and continue.
 
-#### <p>5) Testing Commands</p>
+#### <p>5) Testing Commands
+
+After logging in you are now ready to use commands. Some important commands are listed below:
+
+> > -cd (directory or ‘..’) - enter the directory or move one directory out if ‘..’
+> > -ls - list the current files in the directory
+> > -pwd - prints full name (path) of directory you are currently in
+> > -mkdir (directory) - makes a new directory in the directory you are in
+> > -cp (file) (directory) - copies a file and puts copy in the directory you entered
+> > -cat (file) - shows contents of file
+
+#### 4) Moving files (scp)
+
+</p>
