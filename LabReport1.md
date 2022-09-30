@@ -11,4 +11,4 @@ In order to login to your remote access computer, two important pieces of inform
 You can obtain the hostname by looking it up on:<br/>
 https://sdacs.ucsd.edu/~icc/index.php
 
-(/imgs/login.png)
+[](/imgs/login.png)
