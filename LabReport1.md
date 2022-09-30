@@ -70,3 +70,13 @@ Password:
 Upon entering the command, you will be prompted with a password prompt. Enter your password and hit enter.
 
 ![passwordCmd](/imgs/passwordcmd.png)
+
+Note: No characters will appear on the screen when entering the password.
+
+After entering the correct password you should see the following screen:
+
+![loginConfirm](/imgs/loginConfirmation.png)
+
+Note: For first time users, you will be prompted to trust ieng6. Enter ‘yes’ and continue.
+
+#### <p>5) Testing Commands</p>
