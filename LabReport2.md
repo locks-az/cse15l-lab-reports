@@ -1,4 +1,6 @@
-# SearchEngine.java
+# Part 1:
+
+## SearchEngine.java code
 
 ```
 import java.io.IOException;
@@ -55,7 +57,7 @@ class SearchEngine {
 }
 ```
 
-# Sever.java
+## Sever.java code
 
 ```
 import java.io.IOException;
@@ -108,3 +110,9 @@ public class Server {
     }
 }
 ```
+
+## Search Engine Home Screen
+
+## Adding
+
+## Querying
