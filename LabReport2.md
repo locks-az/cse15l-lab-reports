@@ -113,6 +113,12 @@ public class Server {
 
 ## Search Engine Home Screen
 
+![Home Screenshot](/LabReport2Imgs/SearchEngineHome.png)
+
 ## Adding
 
+![Adding Screenshot](/LabReport2Imgs/AddingPineapple.png)
+
 ## Querying
+
+![Querying Screenshot](/LabReport2Imgs/SearchingApp.png)
