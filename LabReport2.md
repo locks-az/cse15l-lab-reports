@@ -115,6 +115,12 @@ public class Server {
 
 ![Home Screenshot](/LabReport2Imgs/SearchEngineHome.png)
 
+Upon launching the server with no additions or queries, the webpage will display the home page. SearchEngine.java first runs throught the main method taking in an input string in order to host the server. If no input string was provided, the webpage displays a "missing port number" error. Otherwise, the string is converted into an int and the Handler() method is called.
+
+In the Handler() method,
+
+Since the url is "localhost:6001" with a base path of "/",
+
 ## Adding
 
 ![Adding Screenshot](/LabReport2Imgs/AddingPineapple.png)
