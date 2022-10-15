@@ -156,7 +156,7 @@ static void reverseInPlace(int[] arr) {
 ```
 
 Error:
-The error was that the elements of the array were being overwritten while iterting through it. For example, the first element would be set as the last element and its value would be lost. By the time it iterates to the last element, the method will set the last element as the first element, which is already the last element.
+The error was that the elements of the array were being overwritten while iterting through it. For example, the first element would be set as the last element and its value would be lost. By the time it iterates to the last element, the method will set the last element as the first element, which is already the last element, thus losing the first element entirely. The ending array will be a mirrored array where the front half is the same as the back half reversed.
 
 Fix:
 
@@ -169,3 +169,6 @@ static void reverseInPlace(int[] arr) {
     }
   }
 ```
+
+Solution:
+In order to prevent the overwritting issue, I used a temp variable in order to swap the two opposing side elements. Since I was swapping the elements instead of overwritting them, I no longer needed to iterate to the end of the array, so I change the condition to arr.length/2.
