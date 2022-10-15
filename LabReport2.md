@@ -158,6 +158,8 @@ static void reverseInPlace(int[] arr) {
 Error:
 The error was that the elements of the array were being overwritten while iterting through it. For example, the first element would be set as the last element and its value would be lost. By the time it iterates to the last element, the method will set the last element as the first element, which is already the last element, thus losing the first element entirely. The ending array will be a mirrored array where the front half is the same as the back half reversed.
 
+When using {1,2,3} as a test input, the result should be {3,2,1}. However, the code returns {3,2,3};
+
 Fix:
 
 ```
@@ -199,6 +201,8 @@ public void append(int value) {
 
 Error:
 The error was that inside the append() method, there was a while loop traveling to the last node. The issue was that the line adding the node was inside the while loop. This means that the loop will run infinitely since each time the link list is adding/overwriting a node and then checking is there is a next node. There will always be a next node and the condition will always be true, thus running infinitely.
+
+When testing the code with any input, the loop runs infinitely and does not return a new linked list.
 
 Fix:
 
