@@ -140,3 +140,31 @@ One variable that changed by the time the request finished processing was the 'l
 When the URL path contains the key term "/search", the handleRequest() method travels into another if else statement and begins searching for the element. In order to search for a certain word in the 'lib' array list, it uses a for loop, iterating through all strings in 'lib'. For each string, it checks if the string contains parts of the word given. If it does, it then adds to a temp string and returns it after finishing the loop.
 
 One variable that changed was the value of the 'temp' variable which stores the output. It started off as an empty string and with each string in 'lib' that fit the conditions, 'temp' would increase in size and store that string in addtion to the previous strings. At the end, temp held the desired search results was used in the return statement.
+
+# Part 1:
+
+## ArrayExample.java reverseInPlace() Error
+
+Orignal Code:
+
+```
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+
+Error:
+
+Fix:
+
+```
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
+    }
+  }
+```
