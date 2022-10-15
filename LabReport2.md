@@ -1,8 +1,8 @@
 # Part 1:
 
-## SearchEngine.java code
-
 Arvin Zhang
+
+## SearchEngine.java code
 
 ```
 import java.io.IOException;
