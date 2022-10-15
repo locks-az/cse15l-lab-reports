@@ -2,6 +2,8 @@
 
 ## SearchEngine.java code
 
+Arvin Zhang
+
 ```
 import java.io.IOException;
 import java.net.URI;
