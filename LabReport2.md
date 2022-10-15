@@ -156,6 +156,7 @@ static void reverseInPlace(int[] arr) {
 ```
 
 Error:
+The error was that the elements of the array were being overwritten while iterting through it. For example, the first element would be set as the last element and its value would be lost. By the time it iterates to the last element, the method will set the last element as the first element, which is already the last element.
 
 Fix:
 
