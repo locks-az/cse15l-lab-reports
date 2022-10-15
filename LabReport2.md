@@ -111,20 +111,32 @@ public class Server {
 }
 ```
 
+## Overview
+
+Upon launching the server with no additions or queries, the webpage will display the home page. SearchEngine.java first runs throught the main method taking in an input string in order to host the server. If no input string was provided, the webpage displays a "missing port number" error. Otherwise, the string is converted into an int and the start method from the Server class is called.
+
+Server.java handles the backend and eventually called the handleRequest() method in SearchEngine.java. handleRequest() first checks for the path section of the URL. Then, based on the path, the method enters different conditions, adding to a 'lib' array list or searching and outputing contents already in the 'lib' array list.
+
 ## Search Engine Home Screen
 
 ![Home Screenshot](/LabReport2Imgs/SearchEngineHome.png)
 
-Upon launching the server with no additions or queries, the webpage will display the home page. SearchEngine.java first runs throught the main method taking in an input string in order to host the server. If no input string was provided, the webpage displays a "missing port number" error. Otherwise, the string is converted into an int and the Handler() method is called.
+Since the url is "localhost:6001" with a base path of "/", handleRequest() immediately enters the first condition and simply returns the string "Home" for display on the webpage.
 
-In the Handler() method,
-
-Since the url is "localhost:6001" with a base path of "/",
+No significant values changed since storing information was not needed as the method directly returned the result rather than a variable.
 
 ## Adding
 
 ![Adding Screenshot](/LabReport2Imgs/AddingPineapple.png)
 
+When the URL path contains the key term "/add", handleRequest() then splits the URL string by the character "=" into a string array using .split(). handleRequest() continues by checking for the character "s" which indicates an intentional word will be used as input. Lastly, handleRequest adds the word give after "=" into the parameters string array and displays "X was added."
+
+One variable that changed by the time the request finished processing was the 'lib' variable. The 'lib' variable is used to store the strings added by the URL. It starts off as empty and adds a string with each request.
+
 ## Querying
 
 ![Querying Screenshot](/LabReport2Imgs/SearchingApp.png)
+
+When the URL path contains the key term "/search", the handleRequest() method travels into another if else statement and begins searching for the element. In order to search for a certain word in the 'lib' array list, it uses a for loop, iterating through all strings in 'lib'. For each string, it checks if the string contains parts of the word given. If it does, it then adds to a temp string and returns it after finishing the loop.
+
+One variable that changed was the value of the 'temp' variable which stores the output. It started off as an empty string and with each string in 'lib' that fit the conditions, 'temp' would increase in size and store that string in addtion to the previous strings. At the end, temp held the desired search results was used in the return statement.
