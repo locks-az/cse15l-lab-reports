@@ -141,7 +141,7 @@ When the URL path contains the key term "/search", the handleRequest() method tr
 
 One variable that changed was the value of the 'temp' variable which stores the output. It started off as an empty string and with each string in 'lib' that fit the conditions, 'temp' would increase in size and store that string in addtion to the previous strings. At the end, temp held the desired search results was used in the return statement.
 
-# Part 1:
+# Part 2:
 
 ## ArrayExample.java reverseInPlace() Error
 
@@ -172,3 +172,56 @@ static void reverseInPlace(int[] arr) {
 
 Solution:
 In order to prevent the overwritting issue, I used a temp variable in order to swap the two opposing side elements. Since I was swapping the elements instead of overwritting them, I no longer needed to iterate to the end of the array, so I change the condition to arr.length/2.
+
+## LinkedList.java append() Error
+
+Orignal Code:
+
+```
+public void append(int value) {
+        if(this.root == null) {
+            this.root = new Node(value, null);
+            return;
+        }
+        // If it's just one element, add if after that one
+        Node n = this.root;
+        if(n.next == null) {
+            n.next = new Node(value, null);
+            return;
+        }
+        // Otherwise, loop until the end and add at the end with a null
+        while(n.next != null) {
+            n = n.next;
+            n.next = new Node(value, null);
+        }
+    }
+```
+
+Error:
+The error was that inside the append() method, there was a while loop traveling to the last node. The issue was that the line adding the node was inside the while loop. This means that the loop will run infinitely since each time the link list is adding/overwriting a node and then checking is there is a next node. There will always be a next node and the condition will always be true, thus running infinitely.
+
+Fix:
+
+```
+public void append(int value) {
+        if(this.root == null) {
+            this.root = new Node(value, null);
+            return;
+        }
+        // If it's just one element, add if after that one
+        Node n = this.root;
+        if(n.next == null) {
+            n.next = new Node(value, null);
+            return;
+        }
+        // Otherwise, loop until the end and add at the end with a null
+        while(n.next != null) {
+            n = n.next;
+        }
+        n.next = new Node(value, null);
+
+    }
+```
+
+Solution:
+The solution was to take the line that adds the node out of the while loop so that when it reaches the end of the linked list, it will exit the loop and then add the new node.
