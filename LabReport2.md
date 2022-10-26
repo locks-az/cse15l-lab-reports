@@ -158,7 +158,7 @@ static void reverseInPlace(int[] arr) {
 ```
 
 Error:
-The bug was that the elements of the array were being overwritten while iterting through it. For example, the first element would be set as the last element and its value would be lost. By the time it iterates to the last element, the method will set the last element as the first element, which is already the last element, thus losing the first element entirely. The symptom would result in a mirrored array where the front half is the same as the back half reversed.
+The bug was that the elements of the array were being overwritten while iterting through it. For example, the first element would be set as the last element and its value would be lost. By the time it iterates to the last element, the method will set the last element as the first element, which is already the last element, thus losing the first element entirely. This resulted in a symptom of a mirrored array where the front half is the same as the back half reversed.
 
 When using {1,2,3} as a failure-inducing input, the expected should be {3,2,1}. However, the symptom is {3,2,3};
 
@@ -202,7 +202,7 @@ public void append(int value) {
 ```
 
 Error:
-The bug was that inside the append() method, there was a while loop traveling to the last node. Specifically, the line adding the node was inside the while loop. This means that the loop will run infinitely since each time the link list is adding/overwriting a node and then checking is there is a next node. There will always be a next node and the condition will always be true, thus running infinitely.
+The bug was that inside the append() method, there was a while loop traveling to the last node. Specifically, the line adding the node was inside the while loop. This means that the loop will run infinitely since each time the link list is adding/overwriting a node and then checking if there is a next node. This relationship between the bug and the symptom of the while loop results in there always being a next node, and the condition will always be true, thus haveing an overall program symptom of running infinitely.
 
 Any input to the code is considered a failure-inducing input since the symptom is that the program runs infinitely and does not return a new linked list.
 
@@ -230,4 +230,5 @@ public void append(int value) {
 ```
 
 Solution:
-The solution was to take the line that adds the node out of the while loop so that when it reaches the end of the linked list, it will exit the loop and then add the new node.
+
+To fix the relationship between the bug and the symptom, I took out the line that adds the node out of the while loop so that when it reaches the end of the linked list, it will exit the loop and then add the new node.
