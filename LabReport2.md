@@ -59,7 +59,7 @@ class SearchEngine {
 }
 ```
 
-## Sever.java code
+## Server.java code
 
 ```
 import java.io.IOException;
@@ -158,9 +158,9 @@ static void reverseInPlace(int[] arr) {
 ```
 
 Error:
-The error was that the elements of the array were being overwritten while iterting through it. For example, the first element would be set as the last element and its value would be lost. By the time it iterates to the last element, the method will set the last element as the first element, which is already the last element, thus losing the first element entirely. The ending array will be a mirrored array where the front half is the same as the back half reversed.
+The bug was that the elements of the array were being overwritten while iterting through it. For example, the first element would be set as the last element and its value would be lost. By the time it iterates to the last element, the method will set the last element as the first element, which is already the last element, thus losing the first element entirely. The symptom would result in a mirrored array where the front half is the same as the back half reversed.
 
-When using {1,2,3} as a test input, the result should be {3,2,1}. However, the code returns {3,2,3};
+When using {1,2,3} as a failure-inducing input, the expected should be {3,2,1}. However, the symptom is {3,2,3};
 
 Fix:
 
@@ -175,7 +175,7 @@ static void reverseInPlace(int[] arr) {
 ```
 
 Solution:
-In order to prevent the overwritting issue, I used a temp variable in order to swap the two opposing side elements. Since I was swapping the elements instead of overwritting them, I no longer needed to iterate to the end of the array, so I change the condition to arr.length/2.
+In order to prevent the overwritting bug, I used a temp variable in order to swap the two opposing side elements. Since I was swapping the elements instead of overwritting them, I no longer needed to iterate to the end of the array, so I change the condition to arr.length/2.
 
 ## LinkedList.java append() Error
 
@@ -202,9 +202,9 @@ public void append(int value) {
 ```
 
 Error:
-The error was that inside the append() method, there was a while loop traveling to the last node. The issue was that the line adding the node was inside the while loop. This means that the loop will run infinitely since each time the link list is adding/overwriting a node and then checking is there is a next node. There will always be a next node and the condition will always be true, thus running infinitely.
+The bug was that inside the append() method, there was a while loop traveling to the last node. Specifically, the line adding the node was inside the while loop. This means that the loop will run infinitely since each time the link list is adding/overwriting a node and then checking is there is a next node. There will always be a next node and the condition will always be true, thus running infinitely.
 
-When testing the code with any input, the loop runs infinitely and does not return a new linked list.
+Any input to the code is considered a failure-inducing input since the symptom is that the program runs infinitely and does not return a new linked list.
 
 Fix:
 
