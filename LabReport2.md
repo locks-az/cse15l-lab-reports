@@ -210,7 +210,13 @@ public void append(int value) {
 Bug:
 The bug was that inside the append() method, there was a while loop traveling to the last node. Specifically, the line adding the node was inside the while loop. This means that the loop will run infinitely since each time the link list is adding/overwriting a node and then checking if there is a next node. This relationship between the bug and the symptom of the while loop results in there always being a next node, and the condition will always be true, thus haveing an overall program symptom of running infinitely.
 
-Any input to the code is considered a failure-inducing input since the symptom is that the program runs infinitely and does not return a new linked list.
+Failure Inducing Input and Symptom:
+
+![symptom](/LabReport2Imgs/testLLAppend.png)
+
+![fail input example](/LabReport2Imgs/LLAppendFailure.png)
+
+Any input to the code is considered a failure-inducing input since the symptom is that the program runs infinitely and does not return a new linked list. As seen in the example images above, the failure inducing input was "temp.append(1);" The infinite loop symptom can be seen in the second example image above as no results were outputted. A manuel stop of the program was performed instead.
 
 Fix:
 
