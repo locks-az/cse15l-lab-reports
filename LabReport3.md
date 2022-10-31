@@ -127,7 +127,7 @@ Output:
 
 As seen in the first output screenshot, the command is processing two files, biomed/rr166.txt and biomed/rr167.txt and outputting the file without the string "sequence" which is biomed/rr166.txt. As seen in the second screenshot, which was the output for `grep -c sequence biomed/*.txt` there are two instances of "sequence" in biomed/rr167.txt with zero instances in biomed/rr166.txt, thus proving the command worked. This is a useful example as it allows users to effectively and efficiently compare two different files without manueling reading through each file.
 
-### Example 3:
+### Example 3: Multiple Inputs
 
 `grep -L "account\|problems\|legal\|States" government/*/*.txt`
 
