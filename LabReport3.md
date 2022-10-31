@@ -65,7 +65,7 @@ Output:
 ![grep -c health](./LabReport3Imgs/grep-chealth.png)
 
 Analysis:
-As seen in the output above, grep -c lists each file it searches through along with a numerical value indicating the number of instances the input was found in that file. For example, in plos/pmed.0010010, 7 instances of the word "health" was found. This is useful for the user because it allows the user to easily get the number of times a keyword appears in a txt without visually seeing each instance, which can be unecessary and tedious.
+As seen in the output above, grep -c lists each file it searches through along with a numerical value indicating the number of instances the input was found in that file. For example, in plos/pmed.0010010.txt, 7 instances of the word "health" was found. This is useful for the user because it allows the user to easily get the number of times a keyword appears in a txt without visually seeing each instance, which can be unecessary and tedious.
 
 ### Example 2: Multiple inputs
 
