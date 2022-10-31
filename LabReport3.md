@@ -6,7 +6,7 @@ Arvin Zhang
 
 Overview: The grep command allows the user to locate specific lines with certain strings of characters inside specific files.
 
-### grep -i
+### 1) grep -i
 
 The -i command line option tells the grep command to be case insensitive and ignore all cases.
 
@@ -50,7 +50,7 @@ Output:
 Analysis:
 As seen in the output above, the output still successfully searches for the key term 'anx5' while ignoring capitalization. Since there is no 'lowercase' or 'uppercase' '5,' grep -i simply treates it as a normal character while searching. We are also able to use \*.txt in the file path to search all of the .txt files in a directory. It is important for grep -i to be able to process numerical values since not all characters of a text are from the alphabet.
 
-## grep -c
+## 2) grep -c
 
 The -c command line option tells the grep command to override the normal output of printing the instances of the input and instead counts the instances of the input in each file.
 
@@ -95,7 +95,7 @@ Output:
 Analysis:
 As seen in the output above, the output displays a numerical value for each file, counting the number of times "with a" appeared. Specifically in the first screenshot, it shown that plos/pmed.0020258.txt contains one instance of "with a". This is proven true in the second screenshot with a simple grep command. It is important for the user to be able to search for strings with spaces in them because it provides more flexibility as then they would be able to search and count for phrases or sentences.
 
-## grep -L
+## 3) grep -L
 
 The -L command line option tells the grep command to override the normal output of printing the instances of the input and instead prints all files without instances of the input.
 
