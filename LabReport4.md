@@ -24,4 +24,6 @@ vim<space><shift>D
 
 Enter the command vim along with the first letter of the desired file. Then press tab to automatically fill out the file name. Press enter to run the command. This enters vim mode and allows the user to edit the document with vim.
 
-![replace 1](./LabReport4Imgs/replace1.png)
+![vim d1](./LabReport4Imgs/vimD1.png)
+![vim d2](./LabReport4Imgs/vimD2.png)
+![vim d3](./LabReport4Imgs/vimD3.png)
