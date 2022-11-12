@@ -41,4 +41,11 @@ Here we run the subsitution command across the entire file to replace all instan
 ![replace 2](./LabReport4Imgs/replace2.png)
 ![replace 4](./LabReport4Imgs/replace4.png)
 
+```
+:wq<Enter>
+```
+
+Lastly, :wq is used to exit the vim window and write the changes that were made to the file.
+
 # Part 2
+
