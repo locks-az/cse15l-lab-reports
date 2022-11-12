@@ -49,3 +49,29 @@ Lastly, :wq is used to exit the vim window and write the changes that were made 
 
 # Part 2
 
+VS Code Method:
+![vscode](./LabReport4Imgs/vscode.png)
+
+Total Time: 1 minute 18 seconds
+
+Difficulties:
+
+- Was a hassle entering remote from local
+- Had to enter longer commands to scp into remote.
+
+Remote Vim Method:
+![replace](./LabReport4Imgs/replace3.png)
+
+Total Time: 30 seconds
+
+Difficulties:
+
+- Not as familiar with commands and keys
+
+Style Preference:
+
+Although I am still unfamiliar with vim commands, I prefer using vim because of its simplicity and easy of use. With vim, I do not have to move between local and remote as all the commands can be run on remote. With VS code however, I have to edit it on local and then scp to remote and then move to remote. Thus, I would prefer using vim command and staying on remote when working on a program that I was running remotely.
+
+Decision Factors:
+
+Some project or task facts that will influence my decision on what method I will use will be the difficulty of the task, how monotonous the task is, and wether it is remote or not. If the task is more difficult, I would choose to use VS Code since I am more familiar with it. If the task it monotonous, I will choose to use vim since its commands such as subsitution are easy to use for a large amount of code. If the task is remote, I will also choose to use vim since with vim, I do not need to jump between local and remote.
