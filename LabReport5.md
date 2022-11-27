@@ -63,3 +63,23 @@ fi
 
 score_message $FSCORE $MAXSCORE
 ```
+
+# Example 1
+
+# Example 2
+
+# Example 3
+
+# Tracing Example 1
+
+In example one, I tested grade.sh on this repository: https://github.com/ucsd-cse15l-f22/list-methods-lab3
+
+## Line 1-4
+
+```
+FSCORE=0
+MAXSCORE=100
+```
+
+Defines variables FSCORE and MAXSCORE which is updated later on in the program to calculate the scores of the student submission with each test case. 
+
