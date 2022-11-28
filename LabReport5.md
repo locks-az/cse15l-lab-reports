@@ -66,9 +66,15 @@ score_message $FSCORE $MAXSCORE
 
 # Example 1
 
+![ example 1](./LabReport5Imgs/example1.png)
+
 # Example 2
 
+![ example 2](./LabReport5Imgs/example2.png)
+
 # Example 3
+
+![ example 3](./LabReport5Imgs/example3.png)
 
 # Tracing Example 1
 
@@ -81,5 +87,4 @@ FSCORE=0
 MAXSCORE=100
 ```
 
-Defines variables FSCORE and MAXSCORE which is updated later on in the program to calculate the scores of the student submission with each test case. 
-
+Defines variables FSCORE and MAXSCORE which is updated later on in the program to calculate the scores of the student submission with each test case.
